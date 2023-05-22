@@ -1,144 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurant Prueba</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="assets/styles/style.css">
+    <script src="https://kit.fontawesome.com/2cfe264d44.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/assets/Estilos/styles.css">
+    <link rel="icon" type="image/ico" href="assets/Imagenes/favicon.ico">
+    <title>Fuegos Patagónicos</title>
 </head>
 
-<body>
-    <section class="header">
-
-        <a href="#" class="logo"> <i class="fas fa-utensils"> </i> Logo</a>
-
-        <nav class="navbar">
-            <a href="#home">inicio</a>
-            <a href="#acerca">acerca</a>
-            <a href="#ubicacion">ubicacion</a>
-            <a href="#carta">carta</a>
-            <a href="#contacto">contacto</a>
-
+<body id="componentes">
+    <header>
+        <img class="logo" src="/assets/Imagenes/5.png" alt="Logo">
+        <button id="abrir" class="abrir-menu"><i class="bi bi-list"></i></button>
+        <nav class="nav" id="nav">
+            <!-- API externa de clima -->
+            <div class="clima">
+                <div>
+                    <img src="https://w7.pngwing.com/pngs/467/69/png-transparent-computer-icons-weather-cloudy-text-hand-cloud.png"
+                        class="img-clima">
+                </div>
+                <div id="API-clima">
+                    <div class="container">
+                        <div class="temp">°C</div>
+                        <div class="summary">----</div>
+                        <div class="location"></div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <button id="cerrar" class="cerrar-menu"><i class="bi bi-x-circle-fill"></i></button>
+                <ul class="nav-list">
+                    <li><a class="paginaSeleccionada" href="index.html">Inicio</a></li>
+                    <li><a href="el_restaurante.html">El restaurante</a></li>
+                    <li><a href="donde_estamos.html">¿Dónde estamos?</a></li>
+                    <li><a href="la_carta.html">La carta</a></li>
+                    <li><a href="contactos.html">Contacto - Reservas</a></li>
+                </ul>
+            </div>
         </nav>
-
-        <div id="menu-btn" class="fas fa-bars"></div>
-
+    </header>
+    <section class="section1">
+        <article>
+            <h1 class="h1-index">Bienvenido/a a Fuegos Patagónicos</h1><br>
+            <p>Ubicado en el acceso a San Martin de los Andes, al margen sur del Lago Lacar.</p>
+            <p>Aquí usted se encontrará un espacio confortable donde hemos logrado combinar lo rural con lo sofisticado.
+                Aqui se respiran auténticos aires de campo.</p><br><br>
+            <p>Con nosotros, usted y los suyos podrán disfrutar de Los mejores cortes de carne, variedad de ensaladas,
+                postres a elección y carta de vinos, en un inmejorable entorno.</p>
+        </article>
     </section>
-
-    <section class="home" id="home">
-        <div class="home-slider">
-            <div class="w">
-                <div class="slide" style="background: url(assets/images/fondo2.jpg)  no-repeat; ">
-                    <!-- <img src="assets/images/fondo2.jpg" alt="fondo"> -->
-                    <div class="content">
-                        <span>Maravillosa comida</span>
-                        <h3>deliciosa cocina</h3>
-                        <a href="#" class="btn">comencemos</a>
-                    </div>
-                </div>
-                <!-- <div class="slide" style="background:url(assets/images/fondo1.jpg) no-repeat; background-size: cover ;background-position-x: center; ">
-                    <div class="content">
-                        <span>Maravillosa comida</span>
-                        <h3>deliciosa cocina</h3>
-                        <a href="#" class="btn">comencemos</a>
-                    </div>
-                </div> -->
-
-            </div>
+    <section class="section2">
+        <div><h2  class="tituloGaleria">Galería de imágenes</h2></div>
+        <div class="galeria" id="appgaleria">
+            <button type="button" @click="imagenAnterior" class="btnflecha"><img class="flechaimg"
+                    src="/assets/Imagenes/Flecha izquierda.png" alt=""></button>
+            <div><img v-bind:src="imagen" class="imggaleria" alt=""></div>
+            <button type="button" @click="imagenSiguiente" class="btnflecha"><img class="flechaimg"
+                    src="/assets/Imagenes/Flecha derecha.jpg" alt=""></button>
         </div>
     </section>
-
-    <section class="acerca" id="acerca">
-        <div class="image">
-            <img src="assets/images/fondo1.jpg" alt="">
-
-        </div>
-
-        <div class="contenido">
-            <h3 class="title">Bienvenidos a nuestro Restaurant</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam aut architecto earum aliquid libero ad
-                animi ex dolores neque eius placeat optio consequuntur impedit nam odio fugit, nobis et beatae!</p>
-            <a href="#" class="btn">mas info</a>
-            <div class="icons-container">
-                <div class="icons">
-
-                </div>
+    <section class="section3">
+        <article>
+            <div>
+                <div class="reserva-index">¡Reservá tu mesa!</div>
+                <div><i class="fa-sharp fa-solid fa-angles-down fa-beat-fade flecha" style="color: #e2cf20;"></i></div>
+                <div><a href="contactos.html"><button class="btn-reserva">Reservar</button></a></div>
             </div>
-
-
-        </div>
-
+        </article>
     </section>
 
-
-    <section class="carta" id="carta">
-        <div class="image">
-          
-
+    <footer>
+        <div>
+            <div id="footer-div1">Seguinos en nuestras redes</div>
+            <div><a href="https://www.instagram.com/" target="_blank"><img class="footer-div-img-1" src="/assets/Imagenes/Logo de Instagram.png" alt=""></a>
+                 <a href="https://twitter.com/" target="_blank"><img class="footer-div-img-1" src="/assets/Imagenes/Logo Linkedin.png" alt=""></a>
+                 <a href="https://www.facebook.com/" target="_blank"><img class="footer-div-img-1" src="/assets/Imagenes/Logo de Facebook.png" alt=""></a></div>
         </div>
-
-
-
-    </section>
-
-
-
-
-    <!-- Seccion del footer -->
-    <section class="footer" id="contacto">
-        <div class="icons-container">
-
-            <div class="icons">
-                <i class="fas fa-clock"></i>
-                <h3>horarios</h3>
-                <p>07:00am hasta 10:00pm</p>
-            </div>
-
-            <div class="icons">
-                <i class="fas fa-phone"></i>
-                <h3>telefonos</h3>
-                <p>+54 1 9123-4567</p>
-                <p>+54 1 9222-4444</p>
-            </div>
-
-            <div class="icons">
-                <i class="fas fa-envelope"></i>
-                <h3>email</h3>
-                <p>contactos@fuegospatagonicos.com.ar</p>
-            </div>
-
-            <div class="icons">
-                <i class="fas fa-map"></i>
-                <h3>Direccion</h3>
-                <p>san martin de los andes - neuquen - Argentina</p>
-            </div>
-
+        <div id="footer-div2" class="footer-div-2">Todos los derechos reservados - 2023</div>
+        <div class="footer-div-3">
+            <div id="footer-div3">Chateá con nosotros</div>
+            <div><a href="https://www.whatsapp.com/" target="_blank"><img id="Whatsapp" class="footer-div-img-1" src="/assets/Imagenes/Ícono de Whatsapp.png" alt=""></a></div>
         </div>
-
-        <div class="share">
-            <a href="#" class="fab fa-facebook-f"></a>
-            <a href="#" class="fab fa-twitter"></a>
-            <a href="#" class="fab fa-instagram"></a>
-            <a href="#" class="fab fa-linkedin"></a>
-
-        </div>
-
-
-        <div class="credit">creado por <span>team 11 - comision 23008</span> | todos los derechos reservados 2023
-        </div>
-
-
-
-
-
-    </section>
-
-
-    <script src="assets/scripts/script.js"></script>
-
+    </footer>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="/assets/Js/galeria.js"></script>
+    <script src="/assets/Js/main.js"></script>
+    <script src="/assets/Js/api_clima.js"></script>
 </body>
 
 </html>
