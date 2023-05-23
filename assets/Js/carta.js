@@ -106,6 +106,13 @@ class PlatoList {
         ),
 
         new Plato(
+            'Ensaladas varias',
+            'https://i1.wp.com/lacabrera.com.ar/wp-content/uploads/2015/09/ensalada-varias.jpg',
+            'Para acompañar los platos que más te gustan te damos la oportunidad de combinarlas con tus verduras y gustos preferidos.',
+            2500
+        ),
+
+        new Plato(
             'Verduras Asadas',
             'https://www.lamejorparrilla.com/wp-content/uploads/2017/11/don-julio-5.jpg',
             'Seleccion de las mejores Verduras de estacion asadas a su mejor punto. un deleite',
@@ -171,7 +178,7 @@ let platoWindow = document.querySelector('.plato').clientWidth;
 
 if (platoWindow >= 1300) {
     itemDisplay = document.getElementsByClassName("sliderContainer")[0].getAttribute('item-display-xl');
-    margin = itemDisplay * 4.0;
+    margin = itemDisplay * 4;
 };
 
 
@@ -218,13 +225,13 @@ for (const i of item) {
 
 leftBtn.addEventListener("click", () => {
 
-    // console.log(itemDisplay + 'itemDisplay');
-    // console.log(itemLeft + 'itemLeft');
-    // console.log(itemSlide + 'itemSlide');
-    // console.log(margin + 'margin');
-    // console.log(platoWindow + 'platoWindow');
-    // console.log(inc + 'inc');
-    // console.log(count + 'count');
+    console.log(itemDisplay + 'itemDisplay');
+    console.log(itemLeft + 'itemLeft');
+    console.log(itemSlide + 'itemSlide');
+    console.log(margin + 'margin');
+    console.log(platoWindow + 'platoWindow');
+    console.log(inc + 'inc');
+    console.log(count + 'count');
 
     if (inc !== 0) {
         if (inc === itemLeft) {
@@ -242,6 +249,14 @@ leftBtn.addEventListener("click", () => {
 })
 
 rightBtn.addEventListener("click", () => {
+
+    console.log(itemDisplay + 'itemDisplay');
+    console.log(itemLeft + 'itemLeft');
+    console.log(itemSlide + 'itemSlide');
+    console.log(margin + 'margin');
+    console.log(platoWindow + 'platoWindow');
+    console.log(inc + 'inc');
+    console.log(count + 'count');
 
     if (inc !== itemSlide + itemLeft) {
         if (inc === itemSlide) {

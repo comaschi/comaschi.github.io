@@ -17,13 +17,13 @@ body {
 .plato {
     position: relative;
     background-color: rgb(245, 241, 241);
-    /* z-index: -5; */
 
 }
 
 .sliderContainer {
     position: relative;
     overflow-x: hidden;
+    overflow-y: hidden;
     height: 520px;
 }
 

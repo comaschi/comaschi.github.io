@@ -55,10 +55,10 @@
             <div class="contact_form">
                 <div class="formulario">
                     <h1>Formulario de contacto</h1>
-                    <h3>Por dudas, consultas, sugerencias o inquietudes, escribinos en este apartado y nos pondremos en
+                    <h3>Por dudas, consultas, sugerencias o inquietudes, escribanos en este apartado y nos pondremos en
                         contacto contigo a la brevedad.</h3>
 
-                    <form action="https://formspree.io/f/meqwnonl" method="post"
+                    <form action="https://formspree.io/f/xlekvdzl" method="post"
                         onsubmit="return validacionContacto ()">
 
 
@@ -66,7 +66,7 @@
                             <label for="nombre">Nombre
                                 <span class="obligatorio">*</span>
                             </label>
-                            <input v-model="nombre" v-bind:class="clase" @keydown.tab="validacionNombre"
+                            <input v-model="nombre" v-bind:class="clase" @keydown.tab="validacionNombre" @blur="validacionContacto"
                                 @click="restablecimientoNombre" @select="restablecimientoNombre" type="text"
                                 name="introducir_nombre" required="obligatorio" placeholder="Escribe tu nombre">
                         </p>
@@ -75,10 +75,10 @@
                             <label for="email">Email
                                 <span class="obligatorio">*</span>
                             </label>
-                            <input v-model="correo" v-bind:class="claseCorreo" @keydown.tab="validacionCorreo"
-                                @click="restablecimientoCorreo" @select="restablecimientoCorreo" type="email"
-                                name="introducir_email" id="email" required="obligatorio"
-                                placeholder="Escribe tu dirección de correo electrónico">
+                            <input v-model="correo" v-bind:class="claseCorreo" @blur="validacionCorreo"
+                                @keydown.tab="validacionCorreo" @click="restablecimientoCorreo"
+                                @select="restablecimientoCorreo" type="email" name="introducir_email" id="email"
+                                required="obligatorio" placeholder="Escribe tu dirección de correo electrónico">
                         </p>
 
                         <p>
@@ -201,14 +201,19 @@
     <footer>
         <div>
             <div id="footer-div1">Seguinos en nuestras redes</div>
-            <div><a href="https://www.instagram.com/" target="_blank"><img class="footer-div-img-1" src="/assets/Imagenes/Logo de Instagram.png" alt=""></a>
-                 <a href="https://twitter.com/" target="_blank"><img class="footer-div-img-1" src="/assets/Imagenes/Logo Linkedin.png" alt=""></a>
-                 <a href="https://www.facebook.com/" target="_blank"><img class="footer-div-img-1" src="/assets/Imagenes/Logo de Facebook.png" alt=""></a></div>
+            <div><a href="https://www.instagram.com/" target="_blank"><img class="footer-div-img-1"
+                        src="/assets/Imagenes/Logo de Instagram.png" alt=""></a>
+                <a href="https://twitter.com/" target="_blank"><img class="footer-div-img-1"
+                        src="/assets/Imagenes/Logo Linkedin.png" alt=""></a>
+                <a href="https://www.facebook.com/" target="_blank"><img class="footer-div-img-1"
+                        src="/assets/Imagenes/Logo de Facebook.png" alt=""></a>
+            </div>
         </div>
         <div id="footer-div2" class="footer-div-2">Todos los derechos reservados - 2023</div>
         <div class="footer-div-3">
             <div id="footer-div3">Chateá con nosotros</div>
-            <div><a href="https://www.whatsapp.com/" target="_blank"><img id="Whatsapp" class="footer-div-img-1" src="/assets/Imagenes/Ícono de Whatsapp.png" alt=""></a></div>
+            <div><a href="https://www.whatsapp.com/" target="_blank"><img id="Whatsapp" class="footer-div-img-1"
+                        src="/assets/Imagenes/Ícono de Whatsapp.png" alt=""></a></div>
         </div>
     </footer>
     <script src="https://unpkg.com/vue@next"></script>
