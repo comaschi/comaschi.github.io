@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700&display=swap');
+
+:root {
+  --black: #222;
+  --white: #fff;
+  --light-black: #666;
+  --light-white: #ccc;
+  --light-blue: #1A84BA;
+  --dark-blue: #02538D;
+  --border: .1rem solid #aaa;
+  --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 1);
+
+}
+
+
+* {
+  font-family: 'Dosis', sans-serif;
+  /* margin: 1px; */
+  padding: 1px;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: all .4s cubic-bezier(.43, 1.1, .62, 1.08);
+  text-transform: capitalize;
+}
+
+
+*>img {
+  user-select: none;
+  pointer-events: none;
+
+}
+
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+  width: 1rem
+}
+
+html::-webkit-scrollbar-track {
+  background-color: var(--white);
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: var(--light-blue);
+}
+
+/* body {
+  background-image: url(../img/Imagenes-Hero4.jpg);
+  height: 100vh;
+} */
+
+.btn {
+  display: inline-block;
+  color: var(--white);
+  background-color: var(--dark-blue);
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--light-blue);
+}
+
+section {
+  margin: 1rem;
+}
+
+
+
+/* Navbar -------------------------------------*/
+
+.navbar {
+  background-color: var(--dark-blue);
+}
+
+.navbar-brand {
+  color: var(--light-white)
+}
+
+.navbar-text,
+.nav-link {
+  color: var(--white);
+}
+
+
+/* Jumbotron -------------------------------------*/
+
+.empresa {
+  background:
+    linear-gradient(rgba(256, 256, 256, 0.43),
+      rgba(256, 256, 256, 0.95)),
+    url(../img/dinan_frente_fabi.jpg) no-repeat center center;
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  background-size: 100% 100%;
+  font-weight: bold;
+  color: var(--black);
+}
+
+
+/* Carousel -----------------------------------*/
+.carousel-control-prev-icon {
+  filter: invert(50%);
+}
+
+.carousel-control-next-icon {
+  filter: invert(50%);
+}
+
+.card-text {
+  font-size: 1rem;
+}
+
+.carousel-indicators {
+  display: inline-block;
+  text-indent: 0;
+  cursor: pointer;
+}
+
+.carousel-indicators button {
+  background-color: var(--black);
+}
+
+
+
+.carousel-indicators.active {
+  background-color: var(--dark-blue);
+}
+
+
+/* Contact ----------------------------------*/
+
+.contact,
+.contact .card {
+  color: var(--white);
+  background-color: var(--dark-blue);
+  border: none;
+
+}
+
+
+
+/* Footer ----------------------------------*/
+
+.cp1 {
+  color: var(--white);
+  background-color: var(--light-blue);
+}
+
+.cp2 {
+  color: var(--white);
+  background-color: var(--dark-blue);
+}
